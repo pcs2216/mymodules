@@ -28,7 +28,7 @@
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/openacademy_demo_curso.xml',
+        'demo/demo_curso.xml',
     ],
     'intallable': True,
     'auto_install': False,
