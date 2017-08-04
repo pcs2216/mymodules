@@ -23,6 +23,7 @@
     # always loaded
     'data': [
         'views/vista_curso.xml',
+        'views/vista_session.xml'
         # 'security/ir.model.access.csv',
         #'views/views.xml',
         # 'views/templates.xml',
