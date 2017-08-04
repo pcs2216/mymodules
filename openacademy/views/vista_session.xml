@@ -19,12 +19,12 @@
                             <field name="seats"/>
                         </group>
                     </group>
+                    <label for="attendee_ids"/>
+                    <field name="attendee_ids"/>
                 </sheet>
             </form>
         </field>
     </record>
-
-
     <!-- session tree/list view -->
     <record model="ir.ui.view" id="session_tree_view">
         <field name="name">session.tree</field>
@@ -36,8 +36,6 @@
             </tree>
         </field>
     </record>
-
-    
     <record model="ir.actions.act_window" id="session_list_action">
         <field name="name">Sessions</field>
         <field name="res_model">openacademy.session</field>
