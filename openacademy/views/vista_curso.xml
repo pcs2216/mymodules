@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-
     <!--Vista formulario y notebook -->
     <record model="ir.ui.view" id="course_form_view">
         <field name="name">course.form</field>
@@ -10,34 +9,39 @@
                 <sheet>
                     <group>
                         <field name="name"/>
+                        <field name="responsible_id"/>
                         <!--field name="description"/-->
                     </group>
                     <notebook>
                         <page string="Description">
                             <field name="description"/>
                         </page>
-                        <page string="About">                                This is an example of notebooks                            </page>
+                        <page string="About">                            This is an example of notebooks                        </page>
+                        <page string="Sessions">
+                            <field name="session_ids">
+                                <tree string="Registered sessions" editable="bottom">
+                                    <field name="name"/>
+                                    <field name="instructor_id"/>
+                                </tree>
+                            </field>
+                        </page>
                     </notebook>
                 </sheet>
             </form>
         </field>
     </record>
-
     <!--Agregar vista tree -->
-
     <record model="ir.ui.view" id="course_tree_view">
         <field name="name">course.tree</field>
         <field name="model">openacademy.curso</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
-                <field name="description"/>
+                <field name="responsible_id"/>
             </tree>
         </field>
     </record>
-
     <!--Agrgar filtros de busqueda -->
-
     <record model="ir.ui.view" id="course_search_view">
         <field name="name">course.search.view</field>
         <field name="model">openacademy.curso</field>
