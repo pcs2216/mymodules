@@ -25,6 +25,7 @@
         'views/vista_curso.xml',
         'views/vista_session.xml',
         'views/vista_partner.xml',
+        'workflow/session_workflow.xml',
         # 'security/ir.model.access.csv',
         #'views/views.xml',
         # 'views/templates.xml',
