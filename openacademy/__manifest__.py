@@ -28,6 +28,7 @@
         'workflow/session_workflow.xml',
         'security/security.xml',
         'security/ir.model.access.csv',
+        'views/vista_wizard.xml',
         #'views/views.xml',
         # 'views/templates.xml',
     ],
