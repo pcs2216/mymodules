@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-24 18:36+0000\n"
-"PO-Revision-Date: 2017-08-24 18:36+0000\n"
+"POT-Creation-Date: 2017-08-24 21:39+0000\n"
+"PO-Revision-Date: 2017-08-24 21:39+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -93,6 +93,18 @@ msgstr "Confirmado"
 #: model:ir.ui.menu,name:openacademy.contact_menu
 msgid "Contacts"
 msgstr "Contactos"
+
+#. module: openacademy
+#: code:addons/openacademy/models/openacademy_curso.py:34
+#, python-format
+msgid "Copy of {}"
+msgstr "Copy of {}"
+
+#. module: openacademy
+#: code:addons/openacademy/models/openacademy_curso.py:36
+#, python-format
+msgid "Copy of {} ({})"
+msgstr "Copy of {} ({})"
 
 #. module: openacademy
 #: model:ir.model.fields,field_description:openacademy.field_openacademy_session_course_id
@@ -193,6 +205,18 @@ msgstr "Agrupar por"
 #: model:ir.model.fields,field_description:openacademy.field_openacademy_wizard_id
 msgid "ID"
 msgstr "ID"
+
+#. module: openacademy
+#: code:addons/openacademy/models/openacademy_session.py:61
+#, python-format
+msgid "Incorrect 'seats' value"
+msgstr "Incorrect 'seats' value"
+
+#. module: openacademy
+#: code:addons/openacademy/models/openacademy_session.py:69
+#, python-format
+msgid "Increase seats or remove excess attendees"
+msgstr "Increase seats or remove excess attendees"
 
 #. module: openacademy
 #: model:ir.model.fields,field_description:openacademy.field_openacademy_session_instructor_id
@@ -355,14 +379,24 @@ msgid "Taken seats"
 msgstr "Asientos ocupados"
 
 #. module: openacademy
+#: code:addons/openacademy/models/openacademy_curso.py:24
 #: sql_constraint:openacademy.curso:0
+#, python-format
 msgid "The course title must be unique"
-msgstr "The course title must be unique"
+msgstr "El título del curso debe ser único"
 
 #. module: openacademy
+#: code:addons/openacademy/models/openacademy_session.py:62
+#, python-format
+msgid "The number of available seats may not be negative"
+msgstr "The number of available seats may not be negative"
+
+#. module: openacademy
+#: code:addons/openacademy/models/openacademy_curso.py:20
 #: sql_constraint:openacademy.curso:0
+#, python-format
 msgid "The title of the course should not be the description"
-msgstr "The title of the course should not be the description"
+msgstr "El título del curso no debe ser igual a la descripcción"
 
 #. module: openacademy
 #: model:ir.ui.view,arch_db:openacademy.course_form_view
@@ -373,6 +407,12 @@ msgstr "This is an example of notebooks"
 #: model:ir.model.fields,field_description:openacademy.field_openacademy_curso_name
 msgid "Title"
 msgstr "Título"
+
+#. module: openacademy
+#: code:addons/openacademy/models/openacademy_session.py:68
+#, python-format
+msgid "Too many attendees"
+msgstr "Too many attendees"
 
 #. module: openacademy
 #: model:ir.model,name:openacademy.model_openacademy_curso

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from datetime import timedelta
-from odoo import models, fields, api, exceptions
+from odoo import models, fields, api, exceptions, _
 
 
 class Session (models.Model):
@@ -58,15 +58,15 @@ class Session (models.Model):
         if self.seats < 0:
             return {
                 'warning': {
-                    'title': "Incorrect 'seats' value",
-                    'message': "The number of available seats may not be negative",
+                    'title': _("Incorrect 'seats' value"),
+                    'message': _("The number of available seats may not be negative"),
                 },
             }
         if self.seats < len(self.attendee_ids):
             return {
                 'warning': {
-                    'title': "Too many attendees",
-                    'message': "Increase seats or remove excess attendees",
+                    'title': _("Too many attendees"),
+                    'message': _("Increase seats or remove excess attendees"),
                 },
             }
 
