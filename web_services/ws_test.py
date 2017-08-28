@@ -25,7 +25,10 @@ for session in sessions:
 
 # 3.create a new session
 course_id = call('openacademy.curso', 'search', [('name','ilike','curso')])[0]
+responsible_id = call('res.partner','search',[('name','=','Delta PC')])[0]
 session_id = call('openacademy.session', 'create', {
-    'name' : 'My session',
+    'name' : 'My session from ws',
+    'instructor_id':responsible_id,
     'course_id' : course_id,
+    'attendee_ids':[(4,46),(4,47)],
 })
