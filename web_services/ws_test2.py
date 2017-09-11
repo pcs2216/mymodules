@@ -1,6 +1,6 @@
 import functools
 import xmlrpclib
-HOST = '172.17.0.2'
+HOST = '172.17.0.3'
 PORT = 8069
 DB = 'odoo_curso'
 USER = 'pcs@soluciones4g.com'
@@ -84,5 +84,5 @@ new_model = call('ir.model','create',{
 })
 """
 
-modelo2 = call('x_custom_model', 'fields_get', [], ['string', 'help', 'type'])
+modelo2 = call('res.partner', 'fields_get', ['partner_latitude'], ['string', 'help', 'type'])
 print "\n campos de  %s" % modelo2

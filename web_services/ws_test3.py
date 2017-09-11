@@ -33,3 +33,7 @@ encuesta_pagina = call('survey.page', 'search_read', [
 
 for session in encuesta_pagina:
     print "ID %d %s" % (session['id'], session['title'])
+
+
+fields = call('res.partner', 'fields_get', ['country_id'], [])
+print "\n fields ids %s" % fields
