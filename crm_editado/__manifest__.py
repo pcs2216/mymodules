@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "openacademy",
+    'name': "CRM Test1",
 
-    'summary': """manage trainings""",
+    'summary': """Entrenando con crm""",
 
     'description': """
-        primera practica de  odoo
+        modificando crm
     """,
 
     'author': "soluciones4g",
@@ -18,25 +18,19 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','crm','sale'],
+    'depends': ['base','sale_crm'],
 
     # always loaded
     'data': [
-        'views/vista_curso.xml',
-        'views/vista_session.xml',
-        'views/vista_partner.xml',
-        'views/vista_crm.xml',
-        'workflow/session_workflow.xml',
-        'security/security.xml',
-        'security/ir.model.access.csv',
-        'views/vista_wizard.xml',
+        #'views/vista_crm.xml',
+        
         
         #'views/views.xml',
         # 'views/templates.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/demo_curso.xml',
+        #'demo/demo_curso.xml',
     ],
     'intallable': True,
     'auto_install': False,

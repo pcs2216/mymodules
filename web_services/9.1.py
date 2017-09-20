@@ -4,9 +4,9 @@ import functools
 import xmlrpclib
 HOST = '172.17.0.2'
 PORT = 8069
-DB = 'encuesta'
+DB = 'odoo_curso'
 USER = 'pcs@soluciones4g.com'
-PASS = 'seguridad2017'
+PASS = 'america666'
 ROOT = 'http://%s:%d/xmlrpc/' % (HOST, PORT)
 
 # 1. Login
@@ -18,14 +18,13 @@ call = functools.partial(
     DB, uid, PASS)
 #*****************************************************************************************
 #*****************************************************************************************
-
+"""
 reader = csv.reader(open('res.partner.csv', 'rb'))
 
 campo=[]
 partner_template={}
 band=1
 for row in reader:
-    if band == 1:
         campo=row
         band=2
     else:
@@ -34,8 +33,11 @@ for row in reader:
             partner_template.update({campo[cont]: row[cont]})
             cont=cont+1            
 print partner_template
-
+"""
 #partner_id = call('res.partner', 'write',[25], partner_template)
 #print partner_id
-#ids = call('res.partner', 'search_read', [('__export__', '=', 9)], ['name'])
+ids = call('crm.lead', 'search_read', [],['id','stage_id','sale_number'])
 #print "\n partner ids %s" % ids
+for x in ids:
+    print x
+
