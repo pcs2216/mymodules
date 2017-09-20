@@ -22,7 +22,7 @@
 
     # always loaded
     'data': [
-        #'views/vista_crm.xml',
+        'views/vista_crm.xml',
         
         
         #'views/views.xml',
