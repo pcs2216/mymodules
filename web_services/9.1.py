@@ -2,11 +2,11 @@
 import csv
 import functools
 import xmlrpclib
-HOST = '172.17.0.2'
+HOST = '70.35.200.126'
 PORT = 8069
-DB = 'odoo_curso'
-USER = 'pcs@soluciones4g.com'
-PASS = 'america666'
+DB = 'CMT_Dev'
+USER = 'gbarrientos@soluciones4g.com'
+PASS = 'Happy2016*'
 ROOT = 'http://%s:%d/xmlrpc/' % (HOST, PORT)
 
 # 1. Login
@@ -36,7 +36,7 @@ print partner_template
 """
 #partner_id = call('res.partner', 'write',[25], partner_template)
 #print partner_id
-ids = call('crm.lead', 'search_read', [],['id','stage_id','sale_number'])
+ids = call('crm.lead', 'search_read', [],['stage_id'])
 #print "\n partner ids %s" % ids
 for x in ids:
     print x
