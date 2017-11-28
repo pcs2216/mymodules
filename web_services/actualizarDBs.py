@@ -19,29 +19,15 @@ call = functools.partial(
     DB, uid, PASS)
 #*****************************************************************************************
 #*****************************************************************************************
-"""
-reader = csv.reader(open('res.partner.csv', 'rb'))
+reader = csv.reader(open('CSuprema.csv', 'rb'))
 
-campo=[]
-partner_template={}
-band=1
+#actualizar campos de contactos comparando por nombre
 for row in reader:
-        campo=row
-        band=2
-    else:
-        cont=0  
-        for col in campo:  
-            partner_template.update({campo[cont]: row[cont]})
-            cont=cont+1            
-print partner_template
-"""
-#partner_id = call('res.partner', 'write',[25], partner_template)
-#print partner_id
-
-
-
-ids = call('res.partner', 'search_read', [('id','=','7134')],['name','total_invoiced','category_id'])
-#print "\n partner ids %s" % ids
-for x in ids:
-    print x
-
+    nome=row[0]
+    nombre = call('res.partner', 'search', [('name', '=', nome)])
+    
+    if len(nombre)>0 :
+        print nombre[0]
+        partner_id = call('res.partner', 'write', [nombre[0]], {'x_cmt_prospeccion': 2})
+        
+    
